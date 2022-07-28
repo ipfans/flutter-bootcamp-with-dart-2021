@@ -17,12 +17,15 @@ class XylophoneApp extends StatelessWidget {
 
   Widget buildKey(int soundNumber, Color color) {
     return Expanded(
-      child: FlatButton(
-        onPressed: () {
-          playsound(soundNumber);
-        },
-        color: color,
-      ),
+      child: OutlinedButton(
+          onPressed: () {
+            playsound(soundNumber);
+          },
+          child: Text('Play'),
+          style: OutlinedButton.styleFrom(
+            primary: Colors.white,
+            backgroundColor: color,
+          )),
     );
   }
 
